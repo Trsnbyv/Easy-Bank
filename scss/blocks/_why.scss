@@ -1,0 +1,50 @@
+.why-section {
+  background: var(--why-bg);
+  padding: 95px 0;
+}
+.why__title-wrapper {
+  max-width: 635px;
+  margin-bottom: 72px;
+}
+.why__title {
+  @include titleStyle($fs: 40px, $mb: 16px);
+}
+.why__text {
+  @include textStyle($fs: 18px, $mb:none);
+}
+.why__content-wrapper {
+  @include display($al:start, $jc:space-between);
+  gap: 30px;
+}
+.why-wrapper__item {
+  max-width: 255px;
+}
+.why-item__title {
+  @include titleStyle($fs: 24px, $mb:none);
+  margin: 40px 0 26px;
+  line-height: 30px;
+}
+.why-item__text {
+  @include textStyle($fs: 16px, $mb:none);
+}
+
+@media (max-width: 763px) {
+
+  .why__title-wrapper {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 56px;
+  }
+  .why__content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .why-wrapper__item {
+    width: 100%;
+    text-align: center;
+  }
+  .why-item__title{
+  }
+}

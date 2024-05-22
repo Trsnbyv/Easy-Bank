@@ -1,0 +1,84 @@
+:root{
+    --nav-color:rgb(149, 151, 165);
+    --btn-bg:linear-gradient(134.71deg, rgb(51, 211, 94) -43.027%,rgb(42, 182, 217) 56.553%);
+    --btn-color:rgb(255, 255, 255);
+    --header-bg:rgb(255, 255, 255);
+    --moon-color:white;
+    --body-bg:rgb(242, 242, 242);
+    --text-color: rgb(149, 151, 165);
+    --title-color:rgb(45, 49, 77);
+    --why-bg:rgb(244, 245, 247);
+    --articles-bg:rgb(242, 242, 242);
+    --footer-bg: rgb(45, 49, 77);
+}
+
+.mode{
+    --nav-color:white;
+    --btn-bg:rgb(173, 173, 173);
+    --btn-color:black;
+    --header-bg:#333;
+    --moon-color:#333;
+    --body-bg:rgb(41, 41, 41);
+    --text-color: white;
+    --title-color:rgb(200, 200, 200);
+    --why-bg: rgb(35, 34, 34);
+    --articles-bg: rgb(8, 8, 8);
+    --footer-bg: rgb(26, 29, 45);
+}
+
+
+@mixin display($al:center, $jc:space-between){
+    display: flex;
+    align-items:$al;
+    justify-content: $jc;
+}
+
+
+@mixin linkStyle($fs:14px, $lh:-1px, $ls:-0.11px){
+    color: var(--nav-color);
+    font-size: $fs;
+    font-weight: 400;
+    line-height: $lh;
+    letter-spacing: $ls;
+}
+
+
+@mixin buttonStyle($w:163px){
+    width:$w;
+    padding: 8px 0;
+    border-radius: 22px;
+    background: var(--btn-bg);
+    color: var(--btn-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0px;
+    border: none;
+    cursor: pointer;
+    transition: all 0,2s linear;
+    &:hover{
+        background: linear-gradient(134.71deg, rgb(31, 144, 61) -43.027%,rgb(36, 118, 138) 56.553%);
+        opacity: 0.9;
+    }
+    &:active{
+        opacity: 0.4;
+    }
+}
+
+@mixin titleStyle($fs, $mb){
+    color: var(--title-color);
+    font-size: $fs;
+    font-weight: 100;
+    line-height: 64px;
+    letter-spacing: -1px;
+    margin-bottom: $mb;
+}
+
+@mixin textStyle($fs, $mb){
+    color: var(--text-color);
+    font-size: $fs;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: -0.28px;
+    margin-bottom: $mb;
+}
